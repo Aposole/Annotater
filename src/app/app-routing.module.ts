@@ -1,7 +1,16 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { UploadComponent } from './upload/upload.component';
+import { AnnotaterComponent } from './annotater/annotater.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path:'',component:UploadComponent
+  },
+  {
+    path:'annot',component:AnnotaterComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

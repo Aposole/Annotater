@@ -1,0 +1,10 @@
+<input type="file" (change)="fileSelected($event)" multiple />
+<button type="submit" (click)="uploader.uploadAll()">Upload All</button>
+<button (click)="annotateImages()">Annotate Images</button>
+<div>
+    <li *ngFor="let img of uploadedImages">
+        <img [src]="img.src" alt="Uploaded Image"
+        height="500px"
+        />
+      </li>
+  </div>
